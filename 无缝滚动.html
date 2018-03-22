@@ -48,22 +48,6 @@
 </body>
 </html>
 <script>
-    //var myscroll = document.getElementById("myscroll");
-    //var myscroll_ul = myscroll.children[0];
-    //var num = 0; //控制左侧值 left
-    //var timer = null;//定时器
-    //timer = setInterval(autoPlay,10);
-    //function autoPlay(){
-    //    num--;
-    //    num<=-1200 ? num = 0 : num ;
-    //    myscroll_ul.style.left=num+"px";
-    //    myscroll.onmouseover = function () {
-    //        //clearInterval(timer);//鼠标经过大盒子 停止定时器timer
-    //    }
-    //    myscroll.onmouseout = function(){
-    //        timer = setInterval(autoPlay,10); //开启定时器 名字还是叫timer
-    //    }
-    //}
 	autoPlay();
 	function autoPlay(){
 		var num=0;
@@ -71,8 +55,7 @@
 		timer=setInterval(function(){
 		num--;
 		num<-1200 ? num=0:num;
-		$("#myscroll ul").css("left","num+'px'");
-		console.log(num+'px');	
+		$("#myscroll ul").css("left","num+'px'");	
 		},10);
 	}
 	$("myscroll").mouseover(function(){
