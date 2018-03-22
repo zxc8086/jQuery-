@@ -37,12 +37,13 @@
 <body>
 <div class="box" id="myscroll">
     <ul>
-        <li><img src="images/1.jpg" alt=""/></li>
-        <li><img src="images/2.jpg" alt=""/></li>
-        <li><img src="images/3.jpg" alt=""/></li>
-        <li><img src="images/4.jpg" alt=""/></li>
-        <li><img src="images/1.jpg" alt=""/></li>
-        <li><img src="images/2.jpg" alt=""/></li>
+        <li><img src="images/img1.jpg" alt=""/></li>
+        <li><img src="images/img2.jpg" alt=""/></li>
+        <li><img src="images/img3.jpg" alt=""/></li>
+        <li><img src="images/img4.jpg" alt=""/></li>
+        <li><img src="images/img5.jpg" alt=""/></li>
+        <li><img src="images/img1.jpg" alt=""/></li>
+        <li><img src="images/img2.jpg" alt=""/></li>
     </ul>
 </div>
 </body>
@@ -55,13 +56,14 @@
 		timer=setInterval(function(){
 		num--;
 		num<-1200 ? num=0:num;
-		$("#myscroll ul").css("left","num+'px'");	
+        num1=num+"px";
+		$("#myscroll ul").css("left",num+"px");
 		},10);
 	}
-	$("myscroll").mouseover(function(){
+	$("#myscroll").mouseover(function(){
 		clearInterval(timer);
 	});
-	$("myscroll").mouseout(function(){
+	$("#myscroll").mouseout(function(){
 		autoPlay();
 	});
 </script>
