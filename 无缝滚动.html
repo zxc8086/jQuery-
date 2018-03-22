@@ -9,16 +9,16 @@
             padding: 0;
         }
         .box{
-            width: 600px;
+            width: 240px;/*一张图宽带*/
             height: 200px;
             background-color: pink;
             margin: 100px auto;
             overflow: hidden;
-            border: 3px solid red;
+            border: 3px solid #f0f0f0;
             position: relative;
         }
         .box ul{
-            width: 400%;
+            width: 600%;/*（图片数量+1）宽度*/
             height: 200px;
             position: absolute;
             top: 0;
@@ -43,7 +43,6 @@
         <li><img src="images/img4.jpg" alt=""/></li>
         <li><img src="images/img5.jpg" alt=""/></li>
         <li><img src="images/img1.jpg" alt=""/></li>
-        <li><img src="images/img2.jpg" alt=""/></li>
     </ul>
 </div>
 </body>
@@ -51,12 +50,14 @@
 <script>
 	autoPlay();
 	function autoPlay(){
+        var box_width=$(".box").width();
+        var pic_num=$(".box li").length;
 		var num=0;
+        var n=box_width*pic_num*(-1);
 		timer=null;
 		timer=setInterval(function(){
 		num--;
-		num<-1200 ? num=0:num;
-        num1=num+"px";
+		num<n ? num=0:num;
 		$("#myscroll ul").css("left",num+"px");
 		},10);
 	}
